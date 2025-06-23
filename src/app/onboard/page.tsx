@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Check, ChevronDown } from "lucide-react";
 import { yupResolver } from '@hookform/resolvers/yup';
+import Image from "next/image";
 
 const categories = [
   "Singers & Musicians",
@@ -318,7 +319,7 @@ export default function OnboardPage() {
                 }}
               />
               {imagePreview && (
-                <img
+                <Image
                   src={imagePreview}
                   alt="Preview"
                   className="mt-2 rounded w-32 h-32 object-cover border"

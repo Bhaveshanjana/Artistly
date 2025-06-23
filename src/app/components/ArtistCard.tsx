@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export interface Artist {
   id: number;
@@ -15,7 +16,7 @@ export default function ArtistCard({ artist }: { artist: Artist }) {
   return (
     <Card className="flex flex-col h-full bg-white dark:bg-[#3b2f63] border-gray-200 dark:border-gray-700">
       <div className="relative w-auto h-44 mx-2">
-        <img
+        <Image
           src={artist.image}
           alt={artist.location}
           className="object-cover h-56 w-full rounded-sm "
