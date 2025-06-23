@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Check, ChevronDown } from "lucide-react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Image from "next/image";
 
 const categories = [
   "Singers & Musicians",
@@ -47,7 +45,6 @@ interface OnboardingFormData {
   languages: string[];
   feeRange: string;
   location: string;
-  image?: FileList | undefined; 
 }
 
 const schema = yup.object().shape({
@@ -56,26 +53,28 @@ const schema = yup.object().shape({
     .string()
     .required("Bio is required")
     .min(10, "Bio must be at least 10 characters"),
-  category: yup.array().of(yup.string()).min(1, "Select at least one category"),
+  category: yup
+    .array()
+    .of(yup.string().required())
+    .min(1, "Select at least one category")
+    .required("Category is required"),
   languages: yup
     .array()
-    .of(yup.string())
-    .min(1, "Select at least one language"),
+    .of(yup.string().required())
+    .min(1, "Select at least one language")
+    .required("Languages are required"),
   feeRange: yup.string().required("Fee range is required"),
   location: yup.string().required("Location is required"),
-  image: yup.mixed<FileList>().notRequired(), 
 });
 
 export default function OnboardPage() {
   const router = useRouter();
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
     control,
-    setValue,
     formState: { errors },
-  } = useForm<OnboardingFormData>({ 
+  } = useForm<OnboardingFormData>({
     resolver: yupResolver(schema),
     defaultValues: {
       name: "",
@@ -84,19 +83,11 @@ export default function OnboardPage() {
       languages: [],
       feeRange: "",
       location: "",
-      image: undefined,
     },
   });
 
-  const onSubmit = (data: OnboardingFormData) => { // Use the defined type here
-    // Remove image file from log, just log name
-    if (data.image && data.image.length) {
-      // You might want to handle file uploads here, e.g., to an API
-      console.log("Image file name:", data.image[0].name);
-    }
-    const dataToLog = { ...data, image: data.image && data.image.length ? data.image[0].name : undefined };
-    console.log("Onboarding form submitted:", dataToLog);
-    alert("Form submitted! Check the console for data.");
+  const onSubmit = (data: OnboardingFormData) => {
+    console.log("Onboarding form submitted:", data);
     router.push("/");
   };
 
@@ -306,38 +297,6 @@ export default function OnboardPage() {
                 <p className="text-red-500 text-xs mt-1">
                   {errors.feeRange.message as string}
                 </p>
-              )}
-            </div>
-
-            {/* Profile Image Upload Section*/}
-            <div>
-              <label className="block font-medium mb-1">
-                Profile Image (optional)
-              </label>
-              <Input
-                type="file"
-                accept="image/*"
-                {...register("image")}
-                onChange={(e) => {
-                  setValue("image", e.target.files as FileList | undefined); 
-                  if (e.target.files && e.target.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = (ev) =>
-                      setImagePreview(ev.target?.result as string);
-                    reader.readAsDataURL(e.target.files[0]);
-                  } else {
-                    setImagePreview(null);
-                  }
-                }}
-              />
-              {imagePreview && (
-                <Image
-                  src={imagePreview}
-                  alt="Preview"
-                  className="mt-2 rounded w-32 h-32 object-cover border"
-                  width={128} 
-                  height={128}
-                />
               )}
             </div>
 
