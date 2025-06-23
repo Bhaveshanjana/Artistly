@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -16,7 +17,7 @@ const Cta = () => {
             Join the Artistly Community
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-lg text-muted-foreground">
-            Whether you're an event planner seeking unique talent or an artist
+            Whether you&apos;re an event planner seeking unique talent or an artist
             manager ready to shine, Artistly is your stage.
           </p>
           <div className="mt-10">
