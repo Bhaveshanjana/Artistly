@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Check, ChevronDown } from "lucide-react";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 
 const categories = [
@@ -40,6 +40,16 @@ const feeRanges = [
   "$1500 - $4000",
 ];
 
+interface OnboardingFormData {
+  name: string;
+  bio: string;
+  category: string[];
+  languages: string[];
+  feeRange: string;
+  location: string;
+  image?: FileList | undefined; 
+}
+
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   bio: yup
@@ -53,7 +63,7 @@ const schema = yup.object().shape({
     .min(1, "Select at least one language"),
   feeRange: yup.string().required("Fee range is required"),
   location: yup.string().required("Location is required"),
-  image: yup.mixed().notRequired(),
+  image: yup.mixed<FileList>().notRequired(), 
 });
 
 export default function OnboardPage() {
@@ -65,7 +75,7 @@ export default function OnboardPage() {
     control,
     setValue,
     formState: { errors },
-  } = useForm({
+  } = useForm<OnboardingFormData>({ 
     resolver: yupResolver(schema),
     defaultValues: {
       name: "",
@@ -78,12 +88,14 @@ export default function OnboardPage() {
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: OnboardingFormData) => { // Use the defined type here
     // Remove image file from log, just log name
     if (data.image && data.image.length) {
-      data.image = data.image[0].name;
+      // You might want to handle file uploads here, e.g., to an API
+      console.log("Image file name:", data.image[0].name);
     }
-    console.log("Onboarding form submitted:", data);
+    const dataToLog = { ...data, image: data.image && data.image.length ? data.image[0].name : undefined };
+    console.log("Onboarding form submitted:", dataToLog);
     alert("Form submitted! Check the console for data.");
     router.push("/");
   };
@@ -93,7 +105,7 @@ export default function OnboardPage() {
       <h1 className="text-3xl font-bold mb-6 max-w-[345px] md:max-w-2xl mx-auto">
         Artist Onboarding
       </h1>
-      <Card className="bg-gray-50  dark:bg-[#4641596e] border-gray-200 dark:border-gray-700 max-w-2xl mx-4 md:mx-auto shadow-xl">
+      <Card className="bg-gray-50 dark:bg-[#4641596e] border-gray-200 dark:border-gray-700 max-w-2xl mx-4 md:mx-auto shadow-xl">
         <CardContent className="p-6">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 ">
             {/* Name */}
@@ -307,7 +319,7 @@ export default function OnboardPage() {
                 accept="image/*"
                 {...register("image")}
                 onChange={(e) => {
-                  setValue("image", e.target.files);
+                  setValue("image", e.target.files as FileList | undefined); 
                   if (e.target.files && e.target.files[0]) {
                     const reader = new FileReader();
                     reader.onload = (ev) =>
@@ -323,6 +335,8 @@ export default function OnboardPage() {
                   src={imagePreview}
                   alt="Preview"
                   className="mt-2 rounded w-32 h-32 object-cover border"
+                  width={128} 
+                  height={128}
                 />
               )}
             </div>

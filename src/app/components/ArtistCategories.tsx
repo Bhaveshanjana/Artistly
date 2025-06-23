@@ -72,7 +72,7 @@ const ArtistCategories = () => {
                 key={category.name}
                 className="group relative overflow-hidden rounded-lg shadow-lg border-gray-200 dark:border-gray-700 bg-white dark:bg-[#4641596e] hover:border-purple-500 transition-all duration-300"
               >
-                <img
+                <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.name}
                   className="mx-3 h-48 object-cover rounded-sm transition-transform duration-300 group-hover:scale-105"
