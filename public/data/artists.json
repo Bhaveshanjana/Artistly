@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Ava Harmony",
+    "category": "Singers & Musicians",
+    "priceRange": "$500 - $1500",
+    "location": "New York, NY",
+    "image": "https://images.unsplash.com/photo-1498447817931-2edda1605b97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG5ldyUyMHlvcmt8ZW58MHx8MHx8fDA%3D",
+    "bio": "Award-winning vocalist with a soulful sound and dynamic stage presence."
+  },
+  {
+    "id": 2,
+    "name": "Rhythm Flow Band",
+    "category": "Singers & Musicians",
+    "priceRange": "$1200 - $3000",
+    "location": "Los Angeles, CA",
+    "image": "https://images.unsplash.com/photo-1609924211018-5526c55bad5b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGxvcyUyMGFuZ2VsZXN8ZW58MHx8MHx8fDA%3D",
+    "bio": "Energetic live band specializing in pop, rock, and jazz for all occasions."
+  },
+  {
+    "id": 3,
+    "name": "The Urban Dancers",
+    "category": "Dancers & Performers",
+    "priceRange": "$800 - $2000",
+    "location": "Chicago, IL",
+    "image": "https://images.unsplash.com/photo-1477414956199-7dafc86a4f1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hpY2Fnb3xlbnwwfHwwfHx8MA%3D%3D",
+    "bio": "High-energy dance troupe known for electrifying hip-hop and street performances."
+  },
+  {
+    "id": 4,
+    "name": "Graceful Moves",
+    "category": "Dancers & Performers",
+    "priceRange": "$700 - $1800",
+    "location": "Miami, FL",
+    "image": "https://images.unsplash.com/photo-1647837186185-999b768d0a81?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JTIybG9jYXRpb24lMjIlM0ElMjAlMjJNaWFtaSUyQyUyMEZMJTIyJTJDfGVufDB8fDB8fHww",
+    "bio": "Elegant contemporary and ballet dancers for upscale events and galas."
+  },
+  {
+    "id": 5,
+    "name": "DJ Pulse",
+    "category": "DJs & Entertainers",
+    "priceRange": "$600 - $2000",
+    "location": "Las Vegas, NV",
+    "image": "https://images.unsplash.com/photo-1577334928618-2ff2bf09e827?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TGFzJTIwVmVnYXN8ZW58MHx8MHx8fDA%3D",
+    "bio": "Versatile DJ spinning the latest hits and classic tracks for any crowd."
+  },
+  {
+    "id": 6,
+    "name": "MC Spark",
+    "category": "Speakers & Hosts",
+    "priceRange": "$400 - $1200",
+    "location": "Atlanta, GA",
+    "image": "https://images.unsplash.com/photo-1579824966561-2e4d9f79fe9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fEF0bGFudGF8ZW58MHx8MHx8fDA%3D",
+    "bio": "Charismatic emcee and event host with a knack for engaging audiences."
+  },
+  {
+    "id": 7,
+    "name": "DJ Luna",
+    "category": "DJs & Entertainers",
+    "priceRange": "$900 - $2500",
+    "location": "San Francisco, CA",
+    "image": "https://plus.unsplash.com/premium_photo-1670992114662-1f102c1cec79?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fFNhbiUyMEZyYW5jaXNjb3xlbnwwfHwwfHx8MA%3D%3D",
+    "bio": "Renowned club and event DJ with a passion for electronic and dance music."
+  },
+  {
+    "id": 8,
+    "name": "Dr. Inspire",
+    "category": "Speakers & Hosts",
+    "priceRange": "$1000 - $3500",
+    "location": "Boston, MA",
+    "image": "https://images.unsplash.com/photo-1580256542532-6adda49a6e24?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEJvc3RvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "bio": "Motivational speaker and leadership coach for corporate and youth events."
+  },
+  {
+    "id": 9,
+    "name": "Latin Fire",
+    "category": "Dancers & Performers",
+    "priceRange": "$1000 - $2500",
+    "location": "Houston, TX",
+    "image": "https://images.unsplash.com/photo-1692154600992-463fa9b27abd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fEhvdXN0b258ZW58MHx8MHx8fDA%3D",
+    "bio": "Sizzling Latin dance group bringing passion and rhythm to every stage."
+  },
+  {
+    "id": 10,
+    "name": "The Jazz Collective",
+    "category": "Singers & Musicians",
+    "priceRange": "$1500 - $4000",
+    "location": "Seattle, WA",
+    "image": "https://images.unsplash.com/photo-1502988632461-f68f5b4f415a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fFNlYXR0bGV8ZW58MHx8MHx8fDA%3D",
+    "bio": "Smooth jazz ensemble perfect for cocktail hours and sophisticated gatherings."
+  }
+] 
