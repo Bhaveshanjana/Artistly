@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Feature from "@/components/ui/Feature";
+import Feature from "@/app/components/Feature";
 import ArtistCategories from "../components/ArtistCategories";
 import Cta from "../components/Cta";
 import Footer from "../components/Footer";
