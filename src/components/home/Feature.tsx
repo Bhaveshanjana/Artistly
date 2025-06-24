@@ -1,6 +1,9 @@
+"use client";
+
 import { BadgeCheck, CalendarCheck, SearchCheck, Users } from "lucide-react";
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const Feature = () => {
   const features = [
@@ -42,7 +45,12 @@ const Feature = () => {
               platform.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 ">
+          <motion.div
+            initial={{ y: 70, opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 "
+          >
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -61,7 +69,7 @@ const Feature = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

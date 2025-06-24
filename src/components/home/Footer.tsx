@@ -1,6 +1,9 @@
+"use client";
+
 import { Instagram, Linkedin, Sparkles, Twitter } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -19,7 +22,13 @@ const Footer = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-6">
-            <div className="hidden md:block">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="hidden md:block"
+            >
               <Link href="#" className="flex items-center gap-2 mb-4">
                 <Sparkles className="h-7 w-7 text-purple-500" />
                 <span className="text-xl md:text-3xl font-bold text-[#231942] dark:text-white">
@@ -29,10 +38,15 @@ const Footer = () => {
               <p className="text-sm md:text-lg text-gray-500 dark:text-gray-400">
                 Connecting Artistly with opportunity.
               </p>
-            </div>
+            </motion.div>
 
             {/* Platform */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-lg md:text-2xl font-semibold mb-4 text-[#231942] dark:text-white">
                 Platform
               </h3>
@@ -70,10 +84,15 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
-            
+            </motion.div>
+
             {/* Company */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-lg md:text-2xl font-semibold mb-4 text-[#231942] dark:text-white">
                 Company
               </h3>
@@ -111,7 +130,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
           {/* Icons and rights sections */}
