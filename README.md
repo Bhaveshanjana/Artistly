@@ -54,7 +54,7 @@ I have built a fully responsive Artist Booking Web App using Next.js with TypeSc
 **1. Clone the repository:**
 
 ```bash
-git clone https://github.com/Bhaveshanjana/AMRR-TechSols-Assignment.git
+git clone https://github.com/Bhaveshanjana/Artistly.git
 
 ```
 
