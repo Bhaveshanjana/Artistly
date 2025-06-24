@@ -75,8 +75,9 @@ const ArtistCategories = () => {
                 <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.name}
-                  fill
-                  className="mx-3 h-48 object-cover rounded-sm transition-transform duration-300 group-hover:scale-105"
+                  height={200}
+                  width={200}
+                  className="px-1 h-60 w-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                 />
                 <CardContent className="p-6 text-center">
                   {category.icon}

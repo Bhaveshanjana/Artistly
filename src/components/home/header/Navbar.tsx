@@ -10,7 +10,7 @@ import { ToggleMode } from "@/components/home/header/toggleMode";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/artists", label: "Artists" },
-  { href: "/", label: "Events" },
+  { href: "/onboard", label: "Events" },
   { href: "/", label: "About Us" },
   { href: "/", label: "Contact" },
 ];

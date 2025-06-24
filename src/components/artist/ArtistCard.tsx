@@ -19,7 +19,8 @@ export default function ArtistCard({ artist }: { artist: Artist }) {
         <Image
           src={artist.image}
           alt={artist.location}
-          fill
+          height={200}
+          width={200}
           className="object-cover h-56 w-full rounded-sm "
         />
       </div>
