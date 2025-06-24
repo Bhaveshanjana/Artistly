@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Sparkles, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { ToggleMode } from "./ui/toggleMode";
+import { ToggleMode } from "@/components/home/header/toggleMode";
 
 const navLinks = [
   { href: "/", label: "Home" },

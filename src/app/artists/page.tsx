@@ -1,7 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import ArtistCard, { Artist } from "../components/ArtistCard";
-import Filter, { FilterOptions, FilterValues } from "../components/Filter";
+import ArtistCard, { Artist } from "../../components/artist/ArtistCard";
+import Filter, {
+  FilterOptions,
+  FilterValues,
+} from "../../components/home/Filter";
 
 export default function ArtistsPage() {
   const [artists, setArtists] = useState<Artist[]>([]);
@@ -36,11 +39,7 @@ export default function ArtistsPage() {
   return (
     <main className="px-4 md:px-12 py-5 md:py-12 min-h-screen bg-white dark:bg-[#231942] text-[#231942] dark:text-white">
       <h1 className="text-2xl md:text-3xl font-bold mb-6">Browse Artists</h1>
-      <Filter
-        options={filterOptions}
-        values={filters}
-        onChange={setFilters}
-      />
+      <Filter options={filterOptions} values={filters} onChange={setFilters} />
       {filtered.length === 0 ? (
         <div className="text-gray-500 dark:text-gray-400 text-center mt-20 text-2xl">
           No artists found for selected filters!

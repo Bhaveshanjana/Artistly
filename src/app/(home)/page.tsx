@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Feature from "@/app/components/Feature";
-import ArtistCategories from "../components/ArtistCategories";
-import Cta from "../components/Cta";
-import Footer from "../components/Footer";
+import Hero from "../../components/home/Hero";
+import Feature from "@/components/home/Feature";
+import ArtistCategories from "../../components/artist/ArtistCategories";
+import Cta from "../../components/home/Cta";
+import Footer from "../../components/home/Footer";
 
 const page = () => {
   return (

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <div>
-      <section className="w-full py-20 md:py-32 lg:py-40 bg-gradient-to-br from-white dark:from-[#231942] via-white dark:via-[#3b2f63] to-purple-900/30">
+      <section className="w-full py-20 md:py-32 bg-gradient-to-br from-white dark:from-[#231942] via-white dark:via-[#3b2f63] to-purple-900/30">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl  text-[#231942] dark:text-white">
             <span className="block">Connect. Create. Captivate.</span>
