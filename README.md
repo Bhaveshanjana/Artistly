@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Assignment Overview
+This is my submission for an assignment.
+I have built a fully responsive Artist Booking Web App using Next.js with TypeScript. The application follows all the given instructions, featuring multiple pages including artist listing, onboarding form, and filtering functionality. The UI is clean, responsive, and includes some smooth animations using Framer Motion.
 
-## Getting Started
+### Key Features
 
-First, run the development server:
+#### Frontend (Next.js with TypeScript + Tailwind CSS + Framer Motion)
+
+- Fully Responsive Design: The web app provides an optimal experience across desktops, tablets, and mobile devices.
+
+- Light/Dark Theme Support: Theme toggle implemented for better accessibility and user preference.
+
+- Framer Motion Animations: Smooth animations on home page .
+
+- Data is fetched from a dummy JSON/API file.
+
+
+##### Homepage -
+- Overview of the platform.
+- Dummy header and hero section.
+- Call-to-action to explore artists.
+- 3–4 Artist Category Cards (e.g., Singers, Dancers, Speakers, DJs)
+- Basic navigation to other pages.
+
+##### Artist Listing Page -
+- Displays all artists in a responsive grid layout.
+- Each artist card includes:
+  - Artist Name
+  - Category
+  - Price Range
+  - Location
+  - “Ask for Quote” CTA button
+
+##### Filter Functionality -
+- Category
+- Location
+- Price Range.
+
+##### Artist Onboarding Form -
+- Multi-section form to add new artists-
+  - Name
+  - Bio
+  - Category section (multi-select with checkboxes)
+  - Languages section (multi-select with checkboxes)
+  - Fee Range (dropdown)
+  - Location (text input)
+
+- Built using React Hook Form and Yup for validation.
+- On submission, data is printed to console.
+
+
+### To run this project locally:
+
+**1. Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Bhaveshanjana/AMRR-TechSols-Assignment.git
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd [folder name] && npm i
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+**3. Run Next app**
 
-## Learn More
+```bash
+- cd [folder name]
+- npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Feedback
+I’m open to suggestions and improvements!
+Thank you for reviewing my assignment.
